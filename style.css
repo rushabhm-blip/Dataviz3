@@ -1,7 +1,542 @@
-html, body {
+/* ============================================
+   EDITORIAL WEB DESIGN - STYLE RESET & BASE
+   ============================================ */
+
+/* CSS RESET */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Georgia', 'Garamond', serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #2c3e50;
+  background-color: #fafaf8;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+/* ============================================
+   TYPOGRAPHY & HEADINGS
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Segoe UI', 'Trebuchet MS', sans-serif;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  text-transform: none;
+}
+
+h2 {
+  font-size: 2.25rem;
+  letter-spacing: -0.01em;
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 3px solid #d4af37;
+  padding-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-top: 1.5rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+  margin-top: 1.2rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #666;
+}
+
+h6 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #888;
+}
+
+/* ============================================
+   PARAGRAPH & TEXT ELEMENTS
+   ============================================ */
+
+p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+p:first-of-type {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #34495e;
+  margin-bottom: 1.2rem;
+}
+
+a {
+  color: #c41e3a;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #a01830;
+  text-decoration-thickness: 2px;
+}
+
+a:visited {
+  color: #8b1538;
+}
+
+strong, b {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+em, i {
+  font-style: italic;
+  color: #333;
+}
+
+/* ============================================
+   LISTS
+   ============================================ */
+
+ul, ol {
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 0.8rem;
+  text-align: justify;
+}
+
+ul li::marker {
+  color: #d4af37;
+  font-weight: bold;
+}
+
+ol li::marker {
+  color: #c41e3a;
+  font-weight: bold;
+}
+
+dl {
+  margin-bottom: 1.5rem;
+}
+
+dt {
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+dd {
+  margin-left: 2rem;
+  margin-bottom: 0.8rem;
+  color: #555;
+}
+
+/* ============================================
+   BLOCKQUOTE & CODE
+   ============================================ */
+
+blockquote {
+  margin: 2rem 0;
+  padding-left: 2rem;
+  border-left: 4px solid #d4af37;
+  font-style: italic;
+  color: #555;
+  font-size: 1.15rem;
+}
+
+blockquote p {
+  margin-bottom: 0.5rem;
+}
+
+blockquote footer {
+  font-style: normal;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+code {
+  font-family: 'Courier New', 'Monaco', monospace;
+  font-size: 0.9em;
+  background-color: #f4f1de;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  color: #c41e3a;
+}
+
+pre {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 1.5rem;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  font-family: 'Courier New', 'Monaco', monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+/* ============================================
+   IMAGES & MEDIA
+   ============================================ */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem 0;
+  border: 1px solid #e0ddd9;
+}
+
+figure {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 0.95rem;
+  color: #888;
+  font-style: italic;
+  margin-top: 0.5rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ============================================
+   TABLES
+   ============================================ */
+
+table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+thead {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 700;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #e0ddd9;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fafaf8;
+}
+
+tbody tr:hover {
+  background-color: #f4f1de;
+}
+
+/* ============================================
+   BUTTONS & FORMS
+   ============================================ */
+
+button, input[type="button"], input[type="submit"] {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #c41e3a;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+  background-color: #a01830;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active, input[type="button"]:active, input[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="url"],
+input[type="number"],
+textarea,
+select {
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="url"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #c41e3a;
+  box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1a1a1a;
+}
+
+/* ============================================
+   STRUCTURAL ELEMENTS
+   ============================================ */
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+article {
+  margin-bottom: 2rem;
+}
+
+header {
+  background: linear-gradient(135deg, #1a1a1a 0%, #34495e 100%);
+  color: #fff;
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+header h1 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: #ecf0f1;
+  font-style: italic;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #d4af37;
+}
+
+nav {
+  background-color: #34495e;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+nav li {
+  margin-bottom: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #d4af37;
+}
+
+/* ============================================
+   UTILITY & SPACING
+   ============================================ */
+
+hr {
+  border: none;
+  border-top: 2px solid #d4af37;
+  margin: 3rem 0;
+  opacity: 0.5;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.highlight {
+  background-color: #fff3cd;
+  padding: 0.2rem 0.4rem;
+  border-radius: 2px;
+}
+
+/* ============================================
+   CANVAS & P5.JS INTEGRATION
+   ============================================ */
+
 canvas {
   display: block;
+  margin: 2rem auto;
+  border: 1px solid #ddd;
+  background: white;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  main {
+    padding: 2rem 1rem;
+  }
+
+  header {
+    padding: 2rem 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 1rem;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  main {
+    padding: 1.5rem 1rem;
+  }
+
+  blockquote {
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
 }
